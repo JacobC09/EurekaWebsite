@@ -56,19 +56,25 @@ function updateNavBg() {
 // 
 
 var lastScrollY = 0;
-var supressUpdate = false;
 
 window.addEventListener("scroll", (e) => {
     updateNavBg();
-    
-    if (lastScrollY < window.scrollY) {
+
+    if (lastScrollY > window.scrollY)
+        mainNav.classList.remove("nav-hidden");
+
+    lastScrollY = window.scrollY;
+});
+
+window.addEventListener("wheel", (e) => {
+    if (e.wheelDeltaY < 0) {
         mainNav.classList.add("nav-hidden");
     } else {
         mainNav.classList.remove("nav-hidden");
     }
-
-    lastScrollY = window.scrollY;
 });
+
+
 
 // 
 // Faq Question Animations
@@ -96,5 +102,5 @@ questions.forEach(q => q.addEventListener('click', toggleQuestion));
 
 function scrollToElement(identifier) {
     const element = document.getElementById(identifier);
-    window.scrollTo(0, element.offsetTop - mainNav.offsetHeight);
+    window.scrollTo(0, element.offsetTop - mainNav.offsetHeight * 1.5);
 }
