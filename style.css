@@ -99,6 +99,7 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 }
 
 .header-text {
@@ -179,9 +180,11 @@ body {
     }
 }
 
-
 .header-divider {
-    width: 100%;
+    
+    /* tbh idk y u need this but there was a weird glitch where it wan't covering the full width of the screen so i added this anyway */
+    width: calc(100% + 1px);
+
     position: absolute;
     bottom: -1px;
 }
