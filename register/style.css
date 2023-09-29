@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: rgb(19, 23, 24);
+    --main-light-bg-color: rgb(40, 44, 51);
+    --main-extra-light-bg-color: rgb(103, 108, 121);
+    --main-dark-bg-color: rgb(11, 11, 11);
+    --alt-bg-color: #34659B;
+    --light-main-color: #272532;
+    --contrast-bg-color: #e9a538;
+    --gradient: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #ef4e4e);
+    --soft-text-color: #c7c7d3;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(var(--main-light-bg-color) 1%,
+            transparent 9%);
+
+    background-position: 0% 0%;
+    background-size: 50px 50px;
+    background-attachment: fixed;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    scroll-behavior: smooth;
+
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#layers {
+    position: absolute;
+    bottom: 0;
+    min-width: 100vw;
+    max-height: 50vh;
+    z-index: -1;
+}
+
+.card {
+    background-color: var(--main-dark-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 30px;
+    border-radius: 8px;
+    padding: 1em;
+    width: 600px;
+    max-width: 80vw;
+}
+
+.card-top {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.card-top img {
+    width: 2.25em;
+}
+
+.main-header {
+    text-align: center;
+    margin: 2rem;
+    font-size: 4em;
+}
+
+.card-inner {
+    padding: 1em;
+}
+
+.form-field {
+    margin: 1em 0;
+}
+
+label {
+    color: var(--main-extra-light-bg-color);
+}
+
+input {
+    padding: 1em;
+}
+
+input, .select-box, selection {
+    display: block;
+    background-color: var(--main-light-bg-color);
+    width: 100%;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 2px;
+    margin: .5em 0;
+    font-family: inherit;
+    color: #c7c7d3;
+    transition: 200ms ease;
+    font-size: 0.85em;
+}
+
+
+input::placeholder {
+    color: var(--main-extra-light-bg-color);
+    transition: 100ms ease;
+}
+
+input:focus {
+    border-color: var(--main-extra-light-bg-color);
+}
+
+input:hover:not(:focus), .select-box:hover {
+    filter: brightness(110%);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.select-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.select-arrow {
+    color: var(--main-extra-light-bg-color);
+    user-select: none;
+    margin: 0 0.5em;
+    animation: none;
+}
+
+.select-box[data-open="true"] .select-arrow {
+    animation: 200ms select-arrow-bob;
+}
+
+@keyframes select-arrow-bob {
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.select-box > p {
+    color: var(--main-extra-light-bg-color);
+    user-select: none;
+    margin: 1em;
+    flex-grow: 1;
+}
+
+.selection {
+    top: 100%;
+    margin-top: 0.5em;
+    left: -2px;
+    width: calc(100% + 4px);
+    position: absolute;
+    border-radius: 4px;
+    background-color: var(--main-light-bg-color);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+    overflow: hidden;
+    transition: 200ms ease;
+    max-height: 0;
+}
+
+.select-box[data-open="true"] .selection {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.selection .option {
+    padding: 1em;
+    transition: 300ms ease;
+}
+
+.selection .option:hover {
+    background-color: var(--main-extra-light-bg-color);
+}
+
+.progress-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em;
+    gap: 0.75em;
+}
+
+.progress-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--main-extra-light-bg-color);
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+.progress-button:not(.active):hover {
+    filter: brightness(120%);
+}
+
+.progress-button.active {
+    border-color: var(--contrast-bg-color);
+    background: var(--contrast-bg-color);
+}
+
+.button {
+    cursor: pointer;
+    padding: .5em 1em;
+    user-select: none;
+    transition: 200ms ease-in-out;
+    position: relative;
+    border-radius: .6em;
+    background-color: var(--contrast-bg-color);
+    display: inline-block;
+    margin: 0 1em;
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover {
+    box-shadow: inset 0 0 0 10em rgba(255, 246, 165, 0.3);
+}

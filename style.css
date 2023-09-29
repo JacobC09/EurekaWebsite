@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 
-
 :root {
     --main-bg-color: rgb(19, 23, 24);
     --main-light-bg-color: rgb(40, 44, 51);
@@ -199,6 +198,8 @@ body {
     position: relative;
     border-radius: .6em;
     background-color: var(--contrast-bg-color);
+    text-decoration: none;
+    color: white;
 }
 
 .button:hover {
