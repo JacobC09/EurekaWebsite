@@ -1,6 +1,6 @@
 <svg id="visual" viewBox="0 0 1750 400" width="1750" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
         
-    <path fill="#f3c228">
+    <path fill="#2caffb">
         <animate 
             attributeName="d"
             dur="20s"
@@ -17,7 +17,7 @@
         </animate>
     </path>
     
-    <path fill="#f8ae12">
+    <path fill="#008fff">
         <animate 
             attributeName="d"
             dur="20s"
@@ -34,7 +34,7 @@
         </animate>
     </path>
         
-    <path fill="#fc9900">
+    <path fill="#0068ff">
         <animate 
             attributeName="d"
             dur="20s"
@@ -51,7 +51,7 @@
         </animate>
     </path>
         
-    <path fill="#ff8300">
+    <path fill="#392dfa">
         <animate 
             attributeName="d"
             dur="20s"

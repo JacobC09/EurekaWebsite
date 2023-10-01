@@ -42,7 +42,7 @@ ul.addEventListener("mouseleave", navUnderlineNotActive);
 // Navigation Background Change
 // 
 
-const navOpaqueBg = getComputedStyle(document.body).getPropertyValue("--main-bg-color");
+const navOpaqueBg = getComputedStyle(document.body).getPropertyValue("--dark-2");
 const mainHeader = document.getElementById("header");
 const mainNav = document.getElementById("main-nav")
 

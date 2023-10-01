@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 
 :root {
-    --main-bg-color: rgb(19, 23, 24);
-    --main-light-bg-color: rgb(40, 44, 51);
-    --main-extra-light-bg-color: rgb(103, 108, 121);
-    --main-dark-bg-color: rgb(11, 11, 11);
-    --alt-bg-color: #34659B;
-    --light-main-color: #272532;
-    --contrast-bg-color: #e9a538;
-    --gradient: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #ef4e4e);
-    --nav-height: 3.25rem;
+    --dark-1: rgb(11, 11, 11);
+    --dark-2: rgb(19, 23, 24);
+    --dark-3: rgb(40, 44, 51);
+    --dark-4: rgb(103, 108, 121);
+    --primary: #2caffb;
+    --secondary: #df6fef;
+    --gradient: linear-gradient(60deg, var(--primary), var(--secondary));
+    --soft-text-color: #c7c7d3;
 }
+
 
 body,
 html {
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    background-color: var(--main-bg-color);
+    background-color: var(--dark-2);
 }
 
 /* ============= Navigation ============= */
@@ -141,7 +141,7 @@ body {
     position: absolute;
     top: 50%;
     scale: 2;
-    color: var(--contrast-bg-color);
+    color: var(--primary);
     user-select: none;
 }
 
@@ -197,7 +197,7 @@ body {
     transition: 200ms ease-in-out;
     position: relative;
     border-radius: .6em;
-    background-color: var(--contrast-bg-color);
+    background-color: var(--primary);
     text-decoration: none;
     color: white;
 }
@@ -261,7 +261,7 @@ section {
 }
 
 .about-container {
-    background-color: var(--main-light-bg-color);
+    background-color: var(--dark-3);
     width: 50vw;
     border-radius: 10px;
     box-shadow: rgba(37, 37, 37, 0.2) 0px 7px 29px 0px;
@@ -277,7 +277,7 @@ section {
 
 .about-container p {
     font-size: 1.5em;
-    color: var(--main-extra-light-bg-color);
+    color: var(--dark-4);
 }
 
 .about-triangle {
@@ -285,7 +285,7 @@ section {
     height: 0; 
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
-    border-top: 40px solid var(--main-light-bg-color);
+    border-top: 40px solid var(--dark-3);
     position: absolute;
     top: 100%;
     left: 50%;
@@ -307,7 +307,7 @@ section {
 /* ============= Sponsors Section ============= */
 
 #sponsors {
-    background-color: var(--main-dark-bg-color);
+    background-color: var(--dark-1);
     padding: 2em;
 }
 
@@ -345,7 +345,7 @@ section {
 
 .reason {
     padding: 2em;
-    background-color: var(--main-light-bg-color);
+    background-color: var(--dark-3);
     width: 280px;
     border-radius: 10px;
     box-shadow: rgba(37, 37, 37, 0.2) 0px 7px 29px 0px;
@@ -361,7 +361,7 @@ section {
 }
 
 .reason p {
-    color: var(--main-extra-light-bg-color);
+    color: var(--dark-4);
 }
 
 .reason-triangle {
@@ -369,7 +369,7 @@ section {
     height: 0; 
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-top: 20px solid var(--main-light-bg-color);
+    border-top: 20px solid var(--dark-3);
     position: absolute;
     top: 100%;
     left: 50%;
@@ -401,7 +401,7 @@ section {
 .divider {
     width: 100%;
     height: 2px;
-    background-color: var(--main-light-bg-color);
+    background-color: var(--dark-3);
 }
 
 .title {
@@ -412,7 +412,7 @@ section {
 }
 
 .q-open-arrow {
-    color: var(--main-extra-light-bg-color);
+    color: var(--dark-4);
     transition: 200ms;
 }
 
@@ -439,7 +439,7 @@ section {
 .question[data-open="true"] {
     .q-open-arrow {
         transform: rotate(90deg);
-        color: var(--contrast-bg-color);
+        color: var(--primary);
     }
 
     .q-content {
@@ -449,7 +449,7 @@ section {
 
 .answer {
     margin: 1em 0;
-    color: var(--main-extra-light-bg-color);
+    color: var(--dark-4);
 }
 
 /* ============= Glow On Hover ============= */
@@ -493,7 +493,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--main-light-bg-color);
+    background: var(--dark-3);
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -506,15 +506,15 @@ section {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--main-dark-bg-color);
+    background-color: var(--dark-1);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-light-bg-color);
+    background-color: var(--dark-3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--main-extra-light-bg-color);
+    background-color: var(--dark-4);
 }
 
 /* ============= Text Scroll ============= */
@@ -545,7 +545,7 @@ section {
     margin: 0 0.25em;
     font-size: 5vw;
     font-weight: bold;
-    color: var(--main-dark-bg-color);
+    color: var(--dark-1);
 }
 
 @keyframes text-right-to-left {
@@ -599,7 +599,7 @@ section {
 
 .member {
     padding: 1em;
-    background-color: var(--main-light-bg-color);
+    background-color: var(--dark-3);
     width: 280px;
     border-radius: 10px;
     box-shadow: rgba(37, 37, 37, 0.2) 0px 7px 29px 0px;
@@ -621,7 +621,7 @@ section {
 }
 
 .member p {
-    color: var(--main-extra-light-bg-color);
+    color: var(--dark-4);
     margin: 0;
 }
 
@@ -630,7 +630,7 @@ section {
     height: 0; 
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-top: 20px solid var(--main-light-bg-color);
+    border-top: 20px solid var(--dark-3);
     position: absolute;
     top: 100%;
     left: 50%;
@@ -642,7 +642,7 @@ section {
 
 .footer {
     padding: 0 2em;
-    background-color: var(--main-dark-bg-color);
+    background-color: var(--dark-1);
 }
 
 .footer {
@@ -663,7 +663,7 @@ section {
 }
 
 .links a {
-    color: var(--main-extra-light-bg-color);
+    color: var(--dark-4);
     font-size: 2em;
     text-decoration: none;
     margin-top: .25em;
