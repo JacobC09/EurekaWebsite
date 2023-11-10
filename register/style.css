@@ -248,3 +248,4 @@ input:focus::placeholder {
 .button:hover {
     box-shadow: inset 0 0 0 10em rgba(255, 246, 165, 0.3);
 }
+

@@ -1,6 +1,6 @@
 <svg id="visual" viewBox="0 0 1750 400" width="1750" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
         
-    <path fill="#2caffb">
+    <path fill="#2caffb" >
         <animate 
             attributeName="d"
             dur="20s"
@@ -13,8 +13,16 @@
             M0 72L20.8 74.3C41.7 76.7 83.3 81.3 125 85.3C166.7 89.3 208.3 92.7 250 89C291.7 85.3 333.3 74.7 375 67.8C416.7 61 458.3 58 500 65.8C541.7 73.7 583.3 92.3 625 93.7C666.7 95 708.3 79 750 72.7C791.7 66.3 833.3 69.7 875 76.5C916.7 83.3 958.3 93.7 1000 97.5C1041.7 101.3 1083.3 98.7 1125 90.2C1166.7 81.7 1208.3 67.3 1250 69.5C1291.7 71.7 1333.3 90.3 1375 99C1416.7 107.7 1458.3 106.3 1500 105.5C1541.7 104.7 1583.3 104.3 1625 103.7C1666.7 103 1708.3 102 1729.2 101.5L1750 101L1750 401L1729.2 401C1708.3 401 1666.7 401 1625 401C1583.3 401 1541.7 401 1500 401C1458.3 401 1416.7 401 1375 401C1333.3 401 1291.7 401 1250 401C1208.3 401 1166.7 401 1125 401C1083.3 401 1041.7 401 1000 401C958.3 401 916.7 401 875 401C833.3 401 791.7 401 750 401C708.3 401 666.7 401 625 401C583.3 401 541.7 401 500 401C458.3 401 416.7 401 375 401C333.3 401 291.7 401 250 401C208.3 401 166.7 401 125 401C83.3 401 41.7 401 20.8 401L0 401Z
 
             ">
+
             
         </animate>
+        <animate
+            attributeName="fill"
+            values="#2caffb;#df6fef;#2caffb"
+            dur="15s"
+            repeatCount="indefinite">
+        </animate>
+
     </path>
     
     <path fill="#008fff">
@@ -31,6 +39,12 @@
 
             ">
             
+        </animate>
+        <animate
+            attributeName="fill"
+            values="#008fff;#d556d6;#008fff"
+            dur="15s"
+            repeatCount="indefinite">
         </animate>
     </path>
         
@@ -49,6 +63,12 @@
             ">
             
         </animate>
+        <animate
+            attributeName="fill"
+            values="#0068ff;#ca39bc;#0068ff"
+            dur="15s"
+            repeatCount="indefinite">
+        </animate>
     </path>
         
     <path fill="#392dfa">
@@ -65,6 +85,12 @@
         
             ">
             
+        </animate>
+        <animate
+            attributeName="fill"
+            values="#392dfa;#be0aa2;#392dfa"
+            dur="15s"
+            repeatCount="indefinite">
         </animate>
     </path>
 

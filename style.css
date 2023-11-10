@@ -640,36 +640,102 @@ section {
 
 /* ============= Footer ============= */
 
-.footer {
-    padding: 0 2em;
-    background-color: var(--dark-1);
+footer {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 4em;
+    margin-bottom: 2em;
 }
 
-.footer p {
-    font-size: 1.2em;
+.footer-top > * {
+    grid-column: span 2;
 }
 
-.links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+.footer-top img {
+    height: 2em;
+    vertical-align: top;
 }
 
-.links a {
+.footer-top h3, .footer-top h2 {
+    margin: 1.5em 0;
+    display: inline;
+}
+
+.company-desc {
+    grid-column: span 3;
+}
+
+.company-desc p {
     color: var(--dark-4);
-    font-size: 2em;
-    text-decoration: none;
-    margin-top: .25em;
-    transition: 200ms ease;
 }
 
-.links a:hover {
-    filter: brightness(125%);
+.list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list ul li {
+    margin: 1em 0;
+    color: var(--dark-4);
+}
+
+.list ul li a {
+    color: var(--dark-4);
+    text-decoration: none;
+    position: relative;
+    font-weight: 100;
+}
+
+.list ul li a:hover {
+    filter: brightness(120%);
+}
+
+.list ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 0;
+    height: 3px;
+    background-color: var(--dark-4);
+    bottom: -6px;
+    left: 0;
+    transition: 200ms ease;
+    opacity: 0;
+}
+
+.list ul li a:hover::after {
+    opacity: 1;
+    max-width: 100%;
+}
+
+@keyframes scrollBgImage {
+    0% {
+        background-position: -100% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.footer-divider {
+    height: 4px;
+    background-image: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+    animation: scrollBgImage 5s linear infinite;
+    background-size: 250% 250%;
+    border-radius: 1px;
+}
+
+.footer-bottom {
+    margin: 2em 0;
+}
+
+.footer-bottom p {
+    text-align: center;
+    color: var(--dark-4);
 }
